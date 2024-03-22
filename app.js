@@ -13,7 +13,6 @@ app.use(morgan("dev"));
 
 // middleware kita sendiri
 app.use((req, res, next) => {
-  console.log("Hello FSW 1, ini middleware kita sendiri..");
   next();
 });
 
