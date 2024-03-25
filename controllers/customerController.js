@@ -23,12 +23,12 @@ const getCustomers = async (req, res, next) => {
 const getCustomerById = async (req, res, next) => {
   try {
     const id = req.params.id;
-    const customers = await Customer.findById();
+    const customers = await Customer.findById(id);
 
     res.status(200).json({
       status: "success",
       data: {
-        customer,
+        customers,
       },
     });
   } catch (err) {
